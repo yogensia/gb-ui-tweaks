@@ -21,11 +21,10 @@
 // ==================================================================
 
 // variables
-var VERSION = "0.01"; // script version
-var EDGECSS = false; // use development version of CSS
+var GBUIT_VERSION = "0.01"; // script version
+var GBUIT_EDGECSS = true; // use development version of CSS
 
-// comment to enable console logging
-console.log = function() {}
+console.log("GBUIT: INIT");
 
 
 
@@ -36,14 +35,18 @@ console.log = function() {}
 $(function() {
 
 	// if no uberstyle is found
-	if ( $("link[href*='/uberstyles/']").length = 0 ) {
+	if ( $("link[href*='/uberstyles/']").length == 0 ) {
+		console.log("GBUIT: No uber found, continuing...");
 		// add CSS
-		if ( EDGECSS == true ) {
+		if ( GBUIT_EDGECSS == true ) {
+			console.warn("GBUIT: EdgeCSS is enabled!");
 			var gbUiTweaksCSS = '<link rel="stylesheet" href="http://yogensia.com/gamebanana/gb-ui-tweaks/gb-ui-tweaks.css">';
 		} else {
 			var gbUiTweaksCSS = '<link rel="stylesheet" href="https://rawgit.com/yogensia/gb-ui-tweaks/master/gb-ui-tweaks.css">';
 		}
 		$("head").append(gbUiTweaksCSS);
+	} else {
+		console.warn("GBUIT: Uber found, aborting tweaks!");
 	}
 
 });
