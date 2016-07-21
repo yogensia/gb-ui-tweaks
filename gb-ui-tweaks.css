@@ -1,0 +1,26 @@
+/*
+// Gamebanana UI Tweaks by Yogensia
+// --------------------------------
+// Licensed under MIT License, for more info:
+// https://raw.githubusercontent.com/yogensia/gb-ui-tweaks/master/LICENSE
+*/
+
+/* Slightly taller features */
+#FeaturesSliderModule,
+#FeaturesSliderModule .Slides > li,
+#FeaturesSliderModule .Slides > li > a {
+	height:310px;
+}
+
+/* Hide garbage */
+.IconSheet.Beacon.HelpBeacon {
+	display: none;
+}
+
+#AddFormModuleRequesterModule {
+	display: none;
+}
+
+#SponsorBrands {
+	display: none;
+}

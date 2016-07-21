@@ -46,7 +46,7 @@ $(function() {
 		}
 		$("head").append(gbUiTweaksCSS);
 	} else {
-		console.warn("GBUIT: Uber found, aborting tweaks!");
+		console.warn("GBUIT: A Profile or Studio Uber was found, GameBanana UI Tweaks will not be enabled!");
 	}
 
 });
